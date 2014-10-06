@@ -1,3 +1,4 @@
 Changelog for js-jquery
 
+1.11.1
     Initial version
