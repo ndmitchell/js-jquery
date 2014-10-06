@@ -1,0 +1,3 @@
+:set -fwarn-unused-binds -fwarn-unused-imports
+:load Test Paths
+:def test \_ -> return ":main"
