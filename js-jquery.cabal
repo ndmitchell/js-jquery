@@ -8,10 +8,10 @@ category:           Javascript
 author:             Neil Mitchell <ndmitchell@gmail.com>
 maintainer:         Neil Mitchell <ndmitchell@gmail.com>
 copyright:          Neil Mitchell 2014
-synopsis:           Obtain jQuery minified code
+synopsis:           Obtain minified jQuery code
 description:
-    This package bundles the minified jQuery release into a Haskell package,
-    so it can be dependend upon by Cabal packages. The first three components of
+    This package bundles the minified jQuery code into a Haskell package,
+    so it can be depended upon by Cabal packages. The first three components of
     the version number match the upstream jQuery version. The package is designed
     to meet the redistribution requirements of downstream users (e.g. Debian).
 homepage:           https://github.com/ndmitchell/js-jquery#readme
@@ -37,6 +37,8 @@ library
 
     exposed-modules:
         Language.Javascript.JQuery
+
+    other-modules:
         Paths_js_jquery
 
 test-suite js-jquery-test

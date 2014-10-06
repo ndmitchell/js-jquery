@@ -1,8 +1,14 @@
 
--- | Module for accessing the minified jQuery sources,
---   originally obtained from <http://jquery.com/>.
+-- | Module for accessing minified jQuery code (<http://jquery.com/>).
+--   As an example:
+--
+-- > import qualified Language.Javascript.JQuery as JQuery
+-- >
+-- > main = do
+-- >     putStrLn $ "jQuery version " ++ show JQuery.version ++ " source:"
+-- >     putStrLn =<< readFile =<< JQuery.file
 module Language.Javascript.JQuery(
-    file, url, version
+    version, file, url
     ) where
 
 import qualified Paths_js_jquery as Paths
@@ -10,22 +16,21 @@ import Data.List
 import Data.Version
 
 
--- | A local file containing the minified jQuery sources for the version matching this package.
+-- | A local file containing the minified jQuery code for 'version'.
 file :: IO FilePath
 file = Paths.getDataFileName name
 
--- | A remote URL of the jQuery sources for the version matching this package.
---   The URL /does not/ have a protocol prefix, so some users may need to append
---   either @\"http:\"@ or @"\https:\"@ to the front. The URL currently uses
---   the jQuery links at <http://code.jquery.com/>. Other links are available from
+-- | A remote URL of the jQuery sources for 'version'.
+--   The URL /does not/ have a protocol prefix, so users may need to prepend
+--   either @\"http:\"@ or @\"https:\"@ (both work). The URL currently uses
+--   the jQuery CDN links at <http://code.jquery.com/>. Alternative CDN links are listed at
 --   <http://jquery.com/download/#using-jquery-with-a-cdn>.
 url :: String
 url = "//code.jquery.com/" ++ name
 
 name = "jquery-" ++ intercalate "." (map show $ versionBranch version) ++ ".min.js"
 
--- | Version of jQuery bundled in this package (not the version of the package itself,
---   although they will match in at least the first three digits).
+-- | The version of jQuery provided by this package. Not necessarily the version of this package,
+--   but the versions will match in the first three digits.
 version :: Version
 version = Version (take 3 $ versionBranch Paths.version) []
-
