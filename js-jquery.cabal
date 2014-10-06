@@ -8,9 +8,12 @@ category:           Development
 author:             Neil Mitchell <ndmitchell@gmail.com>
 maintainer:         Neil Mitchell <ndmitchell@gmail.com>
 copyright:          Neil Mitchell 2014
-synopsis:           jQuery bundled for Haskell.
+synopsis:           jQuery code from Haskell
 description:
-    Description here.
+    This package bundles the minified jQuery release into a Haskell package,
+    so it can be dependend on by Cabal packages. The first three components of
+    the version number match the upstream jQuery version. The package is designed
+    to meet the redistribution requirements of downstream users (e.g. Debian).
 homepage:           https://github.com/ndmitchell/js-jquery#readme
 bug-reports:        https://github.com/ndmitchell/js-jquery/issues
 tested-with:        GHC==7.8.2, GHC==7.6.3, GHC==7.4.2, GHC==7.2.2
