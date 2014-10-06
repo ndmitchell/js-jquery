@@ -6,8 +6,10 @@ the version number match the upstream jQuery version. The package is designed
 to meet the redistribution requirements of downstream users (e.g. Debian).
 As an example:
 
-    import qualified Language.Javascript.JQuery as JQuery
+```haskell
+import qualified Language.Javascript.JQuery as JQuery
 
-    main = do
-        putStrLn $ "jQuery version " ++ show JQuery.version ++ " source:"
-        putStrLn =<< readFile =<< JQuery.file
+main = do
+    putStrLn $ "jQuery version " ++ show JQuery.version ++ " source:"
+    putStrLn =<< readFile =<< JQuery.file
+```
