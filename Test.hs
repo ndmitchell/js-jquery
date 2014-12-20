@@ -10,8 +10,7 @@ import Network.HTTP
 main :: IO ()
 main = do
     length (versionBranch JQuery.version) === 3
-    versionTags JQuery.version === []
-    versionBranch JQuery.version === take 3 (versionBranch version)
+    show JQuery.version === show version{versionBranch = take 3 $ versionBranch version}
     a <- wget JQuery.url
     b <- readFile =<< JQuery.file
     a === b
