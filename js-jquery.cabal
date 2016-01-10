@@ -19,6 +19,7 @@ bug-reports:        https://github.com/ndmitchell/js-jquery/issues
 tested-with:        GHC==7.10.1, GHC==7.8.4, GHC==7.6.3, GHC==7.4.2, GHC==7.2.2
 extra-source-files:
     javascript/jquery-1.11.3.js
+extra-doc-files:
     CHANGES.txt
     README.md
 
