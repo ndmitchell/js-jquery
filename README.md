@@ -1,4 +1,4 @@
-# js-jquery [![Hackage version](https://img.shields.io/hackage/v/js-jquery.svg?style=flat)](https://hackage.haskell.org/package/js-jquery) [![Build Status](https://img.shields.io/travis/ndmitchell/js-jquery.svg?style=flat)](https://travis-ci.org/ndmitchell/js-jquery)
+# js-jquery [![Hackage version](https://img.shields.io/hackage/v/js-jquery.svg?label=Hackage)](https://hackage.haskell.org/package/js-jquery) [![Build Status](https://img.shields.io/travis/ndmitchell/js-jquery.svg)](https://travis-ci.org/ndmitchell/js-jquery)
 
 This package bundles the minified [jQuery](http://jquery.com/) code into a Haskell package,
 so it can be depended upon by Cabal packages. The first three components of
