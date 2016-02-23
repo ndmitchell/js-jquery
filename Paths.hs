@@ -15,4 +15,4 @@ getDataFileName x = do
 
 version :: Version
 -- can't write a literal Version value since in GHC 7.10 the versionsTag field is deprecated
-version = head $ [v | (v,"") <- readP_to_S parseVersion "1.12.0"] ++ error "version, failed to parse"
+version = head $ [v | (v,"") <- readP_to_S parseVersion "1.12.1"] ++ error "version, failed to parse"
