@@ -1,5 +1,7 @@
 Changelog for js-jquery
 
+1.12.4
+    New version of jQuery
 1.12.3
     New version of jQuery
 1.12.2
