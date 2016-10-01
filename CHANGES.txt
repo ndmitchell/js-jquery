@@ -1,5 +1,7 @@
 Changelog for js-jquery
 
+3.1.1
+    New version of jQuery
 3.1.0
     New version of jQuery
 3.0.0
