@@ -16,7 +16,7 @@ description:
     to meet the redistribution requirements of downstream users (e.g. Debian).
 homepage:           https://github.com/ndmitchell/js-jquery#readme
 bug-reports:        https://github.com/ndmitchell/js-jquery/issues
-tested-with:        GHC==8.0.1, GHC==7.10.3, GHC==7.8.4, GHC==7.6.3, GHC==7.4.2
+tested-with:        GHC==8.0.2, GHC==7.10.3, GHC==7.8.4, GHC==7.6.3, GHC==7.4.2
 extra-source-files:
     javascript/jquery-3.1.1.js
 extra-doc-files:
