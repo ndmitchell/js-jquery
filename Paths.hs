@@ -1,6 +1,6 @@
 -- | Fake cabal module for local building
 
-module Paths_js_jquery where
+module Paths_js_jquery(getDataFileName, version) where
 
 import Data.Version
 import System.Directory
