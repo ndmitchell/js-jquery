@@ -13,3 +13,19 @@ main = do
     putStrLn $ "jQuery version " ++ show JQuery.version ++ " source:"
     putStrLn =<< readFile =<< JQuery.file
 ```
+
+This package installs data files containing the jQuery sources, which must be available at runtime. If you want to produce an executable with no dependency on associated data files, you can use the [`file-embed`](https://hackage.haskell.org/package/file-embed) library:
+
+```haskell
+{-# LANGUAGE TemplateHaskell #-}
+
+import Data.FileEmbed
+import qualified Data.ByteString as BS
+import qualified Language.Javascript.JQuery as JQuery
+import Language.Haskell.TH.Syntax
+
+main = print jQueryContents
+
+jQueryContents :: BS.ByteString
+jQueryContents = $(embedFile =<< runIO JQuery.file)
+```
