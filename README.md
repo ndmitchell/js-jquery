@@ -29,3 +29,37 @@ main = print jQueryContents
 jQueryContents :: BS.ByteString
 jQueryContents = $(embedFile =<< runIO JQuery.file)
 ```
+
+Or, within the Yesod framework, [yesod-static](https://hackage.haskell.org/package/yesod-static):
+
+```haskell
+{-# LANGUAGE TemplateHaskell, QuasiQuotes, TypeFamilies #-}
+
+import Yesod
+import Yesod.EmbeddedStatic
+import qualified Language.Javascript.JQuery as JQuery
+
+data MySite = MySite {
+    ...
+    , getStatic :: EmbeddedStatic
+    ...
+    }
+
+-- Create a Route `jquery_js` to a statically-serveable version of the local jQuery lib.
+mkEmbeddedStatic False "myStatic" . pure . embedFileAt "jquery.js" =<< runIO JQuery.file
+
+mkYesod "PresentationServer" [parseRoutes|
+/ HomeR Get
+...
+/static StaticR EmbeddedStatic getStatic
+|]
+instance Yesod PresentationServer where
+  addStaticContent = embedStaticContent getStatic StaticR Right
+
+getHomeR :: Handler Html
+getHomeR = defaultLayout $ do
+   addScript $ StaticR jquery_js
+   ...
+
+```
+(See also [`sample-embed.hs`](https://github.com/yesodweb/yesod/blob/master/yesod-static/sample-embed.hs).)
