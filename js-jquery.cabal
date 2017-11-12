@@ -47,6 +47,8 @@ test-suite js-jquery-test
     default-language: Haskell2010
     type: exitcode-stdio-1.0
     main-is: src/Test.hs
+    other-modules:
+        Paths_js_jquery
     build-depends:
         base == 4.*,
         js-jquery,
