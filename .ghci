@@ -1,4 +1,4 @@
-:set -fwarn-unused-binds -fwarn-unused-imports
+:set -fwarn-unused-binds -fwarn-unused-imports -fwarn-orphans
 :set -isrc
 :load src\Test.hs src\Paths.hs
 :def test \_ -> return ":main"
