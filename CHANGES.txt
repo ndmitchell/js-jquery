@@ -1,5 +1,7 @@
 Changelog for js-jquery
 
+3.3.1, released 2018-01-21
+    New version of jQuery
     #1, add a file-embed example
 3.2.1, released 2017-03-22
     New version of jQuery

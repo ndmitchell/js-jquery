@@ -1,7 +1,7 @@
 cabal-version:      >= 1.18
 build-type:         Simple
 name:               js-jquery
-version:            3.2.1
+version:            3.3.1
 license:            MIT
 license-file:       LICENSE
 category:           Javascript
@@ -18,14 +18,14 @@ homepage:           https://github.com/ndmitchell/js-jquery#readme
 bug-reports:        https://github.com/ndmitchell/js-jquery/issues
 tested-with:        GHC==8.2.2, GHC==8.0.2, GHC==7.10.3, GHC==7.8.4, GHC==7.6.3, GHC==7.4.2
 extra-source-files:
-    javascript/jquery-3.2.1.js
+    javascript/jquery-3.3.1.js
 extra-doc-files:
     CHANGES.txt
     README.md
 
 data-dir: javascript
 data-files:
-    jquery-3.2.1.min.js
+    jquery-3.3.1.min.js
 
 source-repository head
     type:     git
