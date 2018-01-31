@@ -44,6 +44,7 @@ file = Paths.getDataFileName name
 url :: String
 url = "//code.jquery.com/" ++ name
 
+name :: String
 name = "jquery-" ++ intercalate "." (map show $ versionBranch version) ++ ".min.js"
 
 -- | The version of jQuery provided by this package. Not necessarily the version of this package,
