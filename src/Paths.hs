@@ -11,7 +11,7 @@ import Text.ParserCombinators.ReadP
 getDataFileName :: FilePath -> IO FilePath
 getDataFileName x = do
     dir <- getCurrentDirectory
-    return $ dir </> "javascript" </> x
+    pure $ dir </> "javascript" </> x
 
 version :: Version
 -- can't write a literal Version value since in GHC 7.10 the versionsTag field is deprecated

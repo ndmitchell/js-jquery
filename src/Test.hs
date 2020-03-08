@@ -23,7 +23,7 @@ wget url = do
         Left err -> error $ show err
         Right r | rspCode r /= (2,0,0) -> error $
                     "Incorrect code: " ++ show (rspCode r,rspReason r,url) ++ "\n" ++ rspBody r
-                | otherwise -> return $ rspBody r
+                | otherwise -> pure $ rspBody r
 
 
 a === b | a == b = putChar '.'

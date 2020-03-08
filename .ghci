@@ -1,6 +1,6 @@
 :set -fwarn-unused-binds -fwarn-unused-imports -fwarn-orphans
 :set -isrc
 :load src\Test.hs src\Paths.hs
-:def test \_ -> return ":main"
-:def docs_ const $ return $ unlines [":!cabal haddock"]
-:def docs const $ return $ unlines [":docs_",":!start dist\\doc\\html\\js-jquery\\Language-Javascript-JQuery.html"]
+:def test const $ pure ":main"
+:def docs_ const $ pure $ unlines [":!cabal haddock"]
+:def docs const $ pure $ unlines [":docs_",":!start dist\\doc\\html\\js-jquery\\Language-Javascript-JQuery.html"]
